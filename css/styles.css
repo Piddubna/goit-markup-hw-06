@@ -206,6 +206,15 @@ color: #404BBF;
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; 
+}
+
+.mob-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; 
 }
 
 .mob-menu-close-btn {
@@ -1094,6 +1103,7 @@ fill: #F4F4FD;
 .check-icon {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   fill:#ffffff;  
 }
 
@@ -1107,12 +1117,14 @@ fill: #F4F4FD;
   /* display: inline-flex; */
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   flex-direction: row;
   /* gap: 8px; */
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.33; 
+  /* line-height: 1.33;  */
+  line-height: 1.17;
+  margin-left: 24px;
   letter-spacing: 0.04em;
   text-decoration: underline;
   text-decoration-skip-ink: none;
