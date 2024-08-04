@@ -12,8 +12,8 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="header-container container"> 
+    <header class="page-header">
+        <div class="container header-container "> 
           <nav class="header-navigation">
             <a  class="logo" href="./index.html">Web<span class="logo-dark">Studio </span>
             </a>
@@ -43,9 +43,9 @@
               <a class="address-link" href="tel:+110001111111" target="_blank" rel="noopener nooreferrer nofollow">  +11 (000) 111-11-11</a>
               </li>
           </ul>
-          </address>
-          <button class="mob-menu-open-btn" type="button">
-            <svg class="icon-heroicons-solid_menu" width="24" height="24">
+        </address>
+          <button class="mob-menu-open-btn" type="button" data-menu-open>
+            <svg class="icon-menu" width="24" height="24">
               <use href="./images/icons.svg#icon-heroicons-solid_menu">
               </use>
             </svg>
@@ -53,7 +53,7 @@
           </div> 
           <div class="mob-menu">
             <div class="top">
-            <button class="mob-menu-close-btn" type="button">
+            <button class="mob-menu-close-btn" type="button" data-menu>
               <svg class="modal-close-icon" width="8" height="8"><use href="./images/icons.svg#icon-close"></use>
               </svg>
             </button>
@@ -182,7 +182,24 @@
               <h2 class="team-title">Our Team</h2>
                     <ul class="team-list">
                         <li class="team-list-item"> 
-                          <img src="./images/TeamCard1.jpg" 
+                          <picture>
+                            <source srcset="
+                            ./images/Team/Mark_Guerrero_desc_1x.jpg 1x, 
+                            ./images/Team/Mark_Guerrero_desc_2x.jpg 2x"
+                              media="(min-width: 1158px)"
+                              />
+                            <source srcset="
+                            ./images/Team/Mark_Guerrero_tab_1x.jpg 1x, 
+                            ./images/Team/Mark_Guerrero_tab_2x.jpg 2x" 
+                            media="(min-width: 768px)"
+                            />
+                            <source srcset="
+                            ./images/Team/Mark_Guerrero_mob_1x.jpg 1x, 
+                            ./images/Team/Mark_Guerrero_mob_2x 2x" 
+                            media="(max-width: 767px)"
+                            />
+                          </picture>
+                          <img src="./images/Team/Mark_Guerrero_mob_1x.jpg" 
                           alt="Mark Guerrero" 
                     width="264"/>
                   <div class="team-card">
@@ -217,7 +234,24 @@
               </div>
             </li>
             <li class="team-list-item">
-                  <img src="./images/TeamCard2.jpg" alt="Tom Ford"
+              <picture>
+                <source srcset="
+                  ./images/Team/Tom_Ford_desc_1x.jpg 1x,
+                  ./images/Team/Tom_Ford_desc_2x.jpg 2x" 
+                  media="(min-width:1158px)"
+                    />
+                <source srcset="
+                  ./images/Team/Tom_Ford_tab_1x.jpg 1x,
+                  ./images/Team/Tom_Ford_tab_2x.jpg 2x" 
+                  media="(min-width:768px)"
+                    />
+                  <source srcset="
+                    ./images/Team/Tom_Ford_mob_1x.jpg 1x, 
+                    ./images/Team/Tom_Ford_mob_2x.jpg 2x"
+                    media="(max-width:767px)" 
+                    />
+              </picture>
+                  <img src="./images/Team/Tom_Ford_mob_1x.jpg" alt="Tom Ford"
                   width="264"/>
                   <div class="team-card">
                     <h3 class="team-list-title-item">Tom Ford </h3>
@@ -251,7 +285,24 @@
                 </div>
             </li>
             <li class="team-list-item">
-                <img src="./images/TeamCard3.jpg" alt="Camila Garcia" 
+              <picture>
+                <source srcset="
+                ./images/Team/Camila_Garcia_desc_1x.jpg 1x,
+                ./images/Team/Camila_Garcia_desc_2x.jpg Camila_Garcia_desc_2x 2x"
+                  media="(min-width: 1158px)"
+                  />
+                <source srcset="
+                ./images/Team/Camila_Garsia_tab_1x.jpg 1x, 
+                ./images/Team/Camila_Garsia_tab_2x.jpg 2x" 
+                media="(min-width: 768px)"
+                />
+                <source srcset="
+                ./images/Team/Camila_Garsia_mob_1x.jpg 1x,
+                ./images/Team/Camila_Garsia_mob_1x.jpg 2x"
+                  media="(max-width: 767px)"
+                  />
+              </picture>
+                <img src="./images/Team/Camila_Garsia_mob_1x.jpg" alt="Camila Garcia" 
                   width="264"/>        
                   <div class="team-card"> 
                     <h3 class="team-list-title-item">Camila Garcia</h3>
@@ -284,7 +335,24 @@
                 </div> 
             </li>
             <li class="team-list-item">
-                <img src="./images/TeamCard4.jpg" alt="Daniel Wilson" 
+              <picture>
+                <source srcset="
+                ./images/Team/Daniel_Wilson_desc_1x.jpg 1x,
+                ./images/Team/Daniel_Wilson_desc_2x.jpg 2x "
+                  media="(min-width: 1158px)"
+                  />
+                <source srcset="
+                ./images/Team/Daniel_Wilson_tab_1x.jpg 1x, 
+                ./images/Team/Daniel_Wilson_tab_2x.jpg" 
+                media="(min-width: 768px)"
+                />
+                <source srcset="
+                ./images/Team/Daniel_Wilson_mob_1x.jpg 1x,
+                ./images/Team/Daniel_Wilson_mob_2x.jpg"
+                  media="(max-width: 767px)"
+                  />
+              </picture>
+                <img src="./images/Team/Daniel_Wilson_mob_1x.jpg" alt="Daniel Wilson" 
                 width="264"/>
                 <div class="team-card">
                   <h3 class="team-list-title-item">Daniel Wilson</h3>
@@ -326,7 +394,7 @@
             <ul class="portfolio-menu">
               <li class="portfolio-menu-item">
                 <div class="portfolio-item-wrap">
-                  <img src="./images/img1.jpg" alt="Banking App" width="360"> 
+                  <img src="./images/Portfolio/Banking_mob_1x.jpg" alt="Banking App" width="360"> 
                   <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                   </div>
                   <div class="portfolio-card">
@@ -336,7 +404,10 @@
               </li>
               <li class="portfolio-menu-item">
                 <div class="portfolio-item-wrap">
-                  <img src="./images/img2.jpg" alt="Cashless Payment" width="360">
+                  <picture>
+                    <source srcset="./images/Portfolio/Banking_desc-2x.jpg" media="">
+                  </picture>
+                  <img src="./images/Portfolio/Payment_mob_1x.jpg" alt="Cashless Payment" width="360">
                   <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                 </div>
                   <div class="portfolio-card">
@@ -346,7 +417,7 @@
               </li>
               <li class="portfolio-menu-item">
                 <div class="portfolio-item-wrap">
-                  <img src="./images/img3.jpg" alt="Meditation App" width="360">
+                  <img src="./images/Portfolio/Mediatation_mob_1x.jpg" alt="Meditation App" width="360">
                   <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                 </div>
                   <div class="portfolio-card">
@@ -356,7 +427,7 @@
               </li>
                 <li class="portfolio-menu-item">
                   <div class="portfolio-item-wrap">
-                      <img src="./images/img4.jpg" alt="Taxi Service" width="360">
+                      <img src="./images/Portfolio/Taxi_mob_1x.jpg" alt="Taxi Service" width="360">
                       <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                     </div>
                       <div class="portfolio-card">
@@ -366,7 +437,7 @@
                   </div>
                 <li class="portfolio-menu-item">
                   <div class="portfolio-item-wrap">
-                      <img src="./images/img5.jpg" alt="Screen Illustrations" width="360">
+                      <img src="./images/Portfolio/Screen_ill_mob_1x.jpg" alt="Screen Illustrations" width="360">
                       <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                     </div>
                       <div class="portfolio-card">
@@ -377,7 +448,7 @@
                   </li>
                   <li class="portfolio-menu-item"> 
                     <div class="portfolio-item-wrap">
-                <img src="./images/img6.jpg" alt="Online Courses" width="360">
+                <img src="./images/Portfolio/online_courses_mob_1x.jpg" alt="Online Courses" width="360">
                 <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
               </div>
                 <div class="portfolio-card">
@@ -390,13 +461,13 @@
       </section>
 </main>
   <footer class="footer">
-      <div class="footer-container container"> 
+      <div class="container footer-container "> 
             <div class="footer-logo-text" >
             <a class="footer-logo" href="./index.html">Web<span   class="logo-whith">Studio</span>
             </a>
             <p class="footer-text">Increase the flow of customers and sales for your business with digital marketing & growth solutions.</p>
             </div>
-             <div class="footer-social-contact">
+            <div class="footer-social-contact">
               <p class="footer-list-title">Social media</p>
               <ul class="footer-icon-list">
                 <li  class="footer-social-item">
@@ -529,19 +600,19 @@
               class="modal-check visually-hidden"
               value="true"
                 /> 
-              <label 
-              for="user-privacy" 
-              class="modal-check-label">
-                <span class="span-check">
-                  <svg class="check-icon" 
-                    width="10"
-                    height="8">
-                    <use href="./images/icons.svg#icon-check">
-                    </use>
-                  </svg>
-                </span>I accept the terms and conditions of the
-                <a  class="policy" href="">Privacy Policy</a>
-                </label>
+                <label 
+                for="user-privacy" 
+                class="modal-check-label">
+                  <span class="span-check">
+                    <svg class="check-icon" 
+                      width="10"
+                      height="8">
+                      <use href="./images/icons.svg#icon-check">
+                      </use>
+                    </svg>
+                  </span>I accept the terms and conditions of the
+                  <a  class="policy" href="">Privacy Policy</a>
+                  </label>
             </div>
           <button  class="form-btn"  type="submit">Send</button>
         </form>
