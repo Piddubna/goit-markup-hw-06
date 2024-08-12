@@ -1149,13 +1149,13 @@
 
   @media screen and (min-width: 768px) {
     .footer {
-      padding-left: 108px;
-      padding-right: 164px;
+      padding-left: 124px;
+      padding-right: 124px;
     }
     
     .footer-container {
       justify-content: center;
-      gap: 72px 24px;
+      gap: 24px;
       margin: 0 auto;
     }
 
@@ -1201,10 +1201,10 @@
   
     .footer-subscribe-wrap {
       display: inline-block;
-      height: 72px;
       flex-wrap: wrap;
       padding: 0;
       margin: 0;
+      min-width: 484px;
       align-content: flex-start; 
     }
   
@@ -1212,6 +1212,7 @@
       display: block;
       margin: 0 0 16px 0;
       text-align: flex-start;
+      margin-top: 72px;
     }
   
     .form-subscribe {
@@ -1265,7 +1266,10 @@
 
     .footer-container {
       padding: 0 15px;
+      margin: 0 auto;
       align-items: baseline;
+      justify-content: center;
+
       }
 
     .footer-list-title {
@@ -1273,8 +1277,10 @@
     }
 
     .footer-subscribe-wrap {
-      margin-left: auto;
       height: 80px;
+      align-items: center;
+      justify-content: center;
+      padding-top: 8px;
     }
 
     .subscribe-tytle {
@@ -1285,12 +1291,13 @@
     .form-subscribe {
       display:flex; 
       gap: 24px;
+      margin-top: 24px;
     } 
 
     .subscribe-btn {
       min-width: 165px;
     }
-} 
+  } 
   
   .modal-overlay {
     position: fixed;
