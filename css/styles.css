@@ -121,6 +121,7 @@
   fill: #2f2f37;
   }
 
+ 
   @media screen and (min-width: 768px) {
     .mob-menu-open-btn {
     display: none;
@@ -214,52 +215,11 @@
     }
   } 
 
-  @media screen and (min-width: 1158px) {
-    .logo {
-      margin-right: 76px;
-    }
+/* mobile-menu */
 
-  .header-menu-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .header-menu-link,
-  .address-link  {
-    display: block;
-    padding: 24px 0;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color:#2E2F42;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .address-menu {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  padding-right: 0;
-  }
-
-  .address-link {
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color:#434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-  }
-}
-  /* mobile-menu */
-
-  .mob-menu {
+.mob-menu {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -267,7 +227,7 @@
   background: #fff;
   overflow: auto;
   opacity: 0;
-  visibility: hidden;
+  visibility: visible;
   pointer-events: none; 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
   visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -288,7 +248,6 @@
     background-color: transparent;
     cursor: pointer;
   }
-
 
   .mob-menu.is-open {
   opacity: 1;
@@ -434,6 +393,50 @@
   }  
 
 
+
+  @media screen and (min-width: 1158px) {
+    .logo {
+      margin-right: 76px;
+    }
+
+  .header-menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header-menu-link,
+  .address-link  {
+    display: block;
+    padding: 24px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color:#2E2F42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .address-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-right: 0;
+  }
+
+  .address-link {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color:#434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  }
+}
+ 
   .hero {
   width: 100%;
   background-color: #2E2F42;
@@ -950,10 +953,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin: 0 auto;
   }
 
   .footer-logo-text {
     width: 320px;
+    margin: 0 ato;
   }
 
   .footer-logo {
@@ -1179,7 +1184,7 @@
       display: inline-block;
       flex-wrap: wrap;
       padding: 0;
-      margin: 0;
+      margin: 0 auto 72px;
       min-width: 484px;
       height: 80px;
       align-content: flex-start; 
@@ -1271,12 +1276,12 @@
     .footer-container {
       padding: 0 15px;
       margin: 0 auto;
-      height: 112px;
+      /* height: 112px; */
       align-items: baseline;
     }
 
     .footer-logo-text {
-      margin-right: 120px;
+      margin-right: 100px;
       margin-top: 0;
     }
 
@@ -1297,6 +1302,7 @@
       align-items: center;
       justify-content: center;
       padding-top: 8px;
+      margin-left: auto;
     }
 
     .subscribe-title {
@@ -1345,7 +1351,7 @@
     position: absolute;
     top: 50%; 
     left: 50%; 
-    transform: translate(-60%, -60%); 
+    transform: translate(-50%, -50%); 
     width: 320px;
     min-height: 624px;
     padding: 72px 16px 16px 16px;
@@ -1496,13 +1502,13 @@
 
   .modal-checkbox {
     margin: 0 auto;
-    width: 304px;
+    width: 288px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     gap: 8px;
-    margin-bottom: 24px;
+    margin: 16px 16px 24px 0;
   }
 
   .modal-check {
@@ -1561,9 +1567,10 @@
   }
 
   .modal-checkbox {
-    margin-bottom: 24px;
+    margin:16px 16px 24px;
     width: 360px;
     height: 16px;
+    flex-direction: row;
   }
 
   .modal-field {
@@ -1575,6 +1582,7 @@
   }
 
   .policy {
+
   }
 }
   
